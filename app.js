@@ -25,7 +25,11 @@ const selectItem = id => {
     let item = products[id]
 
 
-    cartItems.innerHTML += `  
+    const div = document.createElement("div")
+    div.classList.add("cart-s");
+
+
+    div.innerHTML = `  
          <div class="cart-s"> 
          <p>${item.title}</p>
             <div class="qytp">
@@ -38,7 +42,7 @@ const selectItem = id => {
             </div>
           </div>
         `;
-
+    cartItems.appendChild(div)
 }
 
 
